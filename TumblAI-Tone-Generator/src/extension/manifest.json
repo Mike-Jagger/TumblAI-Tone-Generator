@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Tumblr Comment Generator",
+    "version": "3",
+    "description": "Generate AI-powered comments on Tumblr posts with a selected tone.",
+    "permissions": [
+      "activeTab",
+      "https://api.example.com/"
+    ],
+    "background": {
+      "service_worker": "background.js",
+      "type": "module"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.tumblr.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icons/icon.jpg"
+    }
+  }
+  
