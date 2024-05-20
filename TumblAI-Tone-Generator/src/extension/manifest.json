@@ -4,22 +4,20 @@
     "version": "3",
     "description": "Generate AI-powered comments on Tumblr posts with a selected tone.",
     "permissions": [
-      "activeTab",
-      "https://api.example.com/"
+      "activeTab"
     ],
     "background": {
-      "service_worker": "background.js",
-      "type": "module"
+      "service_worker": "background.bundle.js"
     },
     "content_scripts": [
       {
         "matches": ["*://www.tumblr.com/*"],
-        "js": ["content.js"]
+        "js": ["content.bundle.js"]
       }
     ],
     "action": {
       "default_popup": "popup.html",
-      "default_icon": "icons/icon.jpg"
+      "default_icon": "icons/icon.png"
     }
   }
   
